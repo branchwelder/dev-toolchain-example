@@ -3,17 +3,17 @@
   "main": "index.js",
   "scripts": {
     "start": "web-dev-server --node-resolve --open --watch",
-    "build": "rollup -c",
+    "build": "rollup --config",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "three": "^0.149.0"
   },
   "devDependencies": {
-    "@rollup/plugin-html": "^1.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@web/dev-server": "^0.1.35",
     "gh-pages": "^5.0.0",
-    "rollup": "^2.79.1"
+    "rollup": "^2.79.1",
+    "rollup-plugin-copy": "^3.4.0"
   }
 }

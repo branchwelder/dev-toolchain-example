@@ -1,10 +1,15 @@
 import { nodeResolve } from "@rollup/plugin-node-resolve";
-import html from "@rollup/plugin-html";
+import copy from "rollup-plugin-copy";
 
 module.exports = {
   input: "index.js",
   output: {
     dir: "dist",
   },
-  plugins: [html(), nodeResolve()],
+  plugins: [
+    copy({
+      targets: [{ src: "index.html", dest: "dist" }],
+    }),
+    nodeResolve(),
+  ],
 };
